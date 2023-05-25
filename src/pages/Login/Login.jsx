@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -9,6 +9,7 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import { FaGooglePlusG } from 'react-icons/fa';
 
 const Login = () => {
+    const [error, setError] = useState('');
     const { signIn, googelSignIn } = useContext(UserContext);
     const provider = new GoogleAuthProvider();
     const navigate = useNavigate();
@@ -26,7 +27,10 @@ const Login = () => {
                 navigate('/package')
                 toast.success('Login Successfull')
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                console.error(error)
+                setError(error.message);
+            })
     }
 
     const handleSubmitGoogle = () => {
@@ -55,7 +59,12 @@ const Login = () => {
                 </Form.Group>
 
                 <Form.Group>
-                    <Form.Text className="">
+                    <Form.Text className="text-danger">
+                        {error}
+                    </Form.Text>
+                </Form.Group>
+                <Form.Group>
+                    <Form.Text>
                         You don't have an account ?<Link to='/signup'>Signup</Link>
                     </Form.Text>
                 </Form.Group>

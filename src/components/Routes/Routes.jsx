@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/spot',
+                path: '/places',
                 element: <Packages></Packages>,
             },
             {

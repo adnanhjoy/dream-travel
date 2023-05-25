@@ -28,7 +28,7 @@ const NavBar = () => {
                         navbarScroll
                     >
                         <Link className='text-decoration-none ps-4 text-black-50' to='/'>Home</Link>
-                        <Link className='text-decoration-none ps-4 text-black-50' to='/spot'>Spot</Link>
+                        <Link className='text-decoration-none ps-4 text-black-50' to='/places'>Places</Link>
                         <Link className='text-decoration-none ps-4 text-black-50' to='/package'>Package</Link>
                         <Link className='text-decoration-none ps-4 text-black-50' to='/about'>About</Link>
                         <Link className='text-decoration-none ps-4 text-black-50' to='/contact'>Contact</Link>

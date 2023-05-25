@@ -5,8 +5,8 @@ import { FaCheck } from 'react-icons/fa';
 const Facilities = ({ places }) => {
     const { id, name, price, d_price, facilities } = places;
     return (
-        <Col className='border rounded p-4 bg-light-subtle'>
-            <div>
+        <Col>
+            <div className='border rounded p-4 bg-light-subtle'>
                 <h3 className='text-center my-4'>{name}</h3>
                 <h1 className='text-center'>$ {price}</h1>
                 <p className='text-decoration-line-through text-center'>$ {d_price}</p>
