@@ -1,0 +1,12 @@
+.package-img{
+    height: 200px;
+}
+
+.text-price{
+    color: #EE6D52;
+}
+
+.place-title:hover{
+    text-decoration: underline;
+    color: blue;
+}
