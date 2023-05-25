@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../context/AuthProvider';
 
 const NavBar = () => {
-    const { user } = useContext(UserContext);
+    const { user, logOut } = useContext(UserContext);
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>
