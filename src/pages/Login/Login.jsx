@@ -2,11 +2,13 @@ import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/AuthProvider';
+import { toast } from 'react-hot-toast';
 
 const Login = () => {
     const { signIn } = useContext(UserContext);
+    const navigate = useNavigate();
 
     const handleSubmitLogin = event => {
         event.preventDefault();
@@ -18,6 +20,8 @@ const Login = () => {
         .then(result => {
             result.user;
             form.reset();
+            navigate('/package')
+            toast.success('Login Successfull')
         })
         .catch(error => console.error(error))
     }

@@ -9,6 +9,13 @@ import { UserContext } from '../../context/AuthProvider';
 
 const NavBar = () => {
     const { user, logOut } = useContext(UserContext);
+
+    const handleLogout = () => {
+        logOut()
+        .then(() => {})
+        .catch(error => console.error(error))
+    }
+
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>
@@ -26,7 +33,7 @@ const NavBar = () => {
                         <Link className='text-decoration-none ps-4 text-black-50' to='/about'>About</Link>
                         <Link className='text-decoration-none ps-4 text-black-50' to='/contact'>Contact</Link>
                     </Nav>
-                    <p>{user.name}</p>
+                    <p className='m-0 me-5'>{user?.email}</p>
                     <Form className="d-flex">
                         <Form.Control
                             type="search"
@@ -37,6 +44,8 @@ const NavBar = () => {
                         <Button variant="outline-success">Search</Button>
                     </Form>
                     {
+                        user?.uid ?
+                        <Link onClick={handleLogout} className='text-decoration-none ps-4 text-black-50'>Logout</Link>:
                         <Link className='text-decoration-none ps-4 text-black-50' to='/login'>Login</Link>
                     }
                 </Navbar.Collapse>
