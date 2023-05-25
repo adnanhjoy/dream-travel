@@ -25,10 +25,11 @@ export const router = createBrowserRouter([
                 element: <Package></Package>,
                 loader: ({params}) => fetch(`http://localhost:5000/places/${params.id}`)
             },
-            // {
-            //     path: '/package',
-            //     element: <Package></Package>
-            // },
+            {
+                path: '/package',
+                element: <Package></Package>,
+                loader: () => fetch('http://localhost:5000/places/coxbazar')
+            },
             {
                 path: '/about',
                 element: <About></About>
