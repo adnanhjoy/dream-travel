@@ -8,12 +8,12 @@ const About = () => {
             <p className='mt-5'>ABOUT US</p>
             <div className='d-md-flex justify-content-between align-items-center gap-5'>
 
-                <img src={about} alt="about" />
+                <img className='w-50' src={about} alt="about" />
 
                 <div>
                     <h2 className='mb-5'>Explore all corners of <br />
                         the world with us.</h2>
-                    <p className='w-50'>These exercises ran in parallel with a series of focus groups comprising of parents. These exercises ran in parallel with a series of focus groups comprising of parents.</p>
+                    <p className=''>These exercises ran in parallel with a series of focus groups comprising of parents. These exercises ran in parallel with a series of focus groups comprising of parents.</p>
                 </div>
             </div>
         </Container>

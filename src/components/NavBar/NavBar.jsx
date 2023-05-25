@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../../context/AuthProvider';
 
 const NavBar = () => {
+    const { user } = useContext(UserContext);
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>
@@ -24,6 +26,7 @@ const NavBar = () => {
                         <Link className='text-decoration-none ps-4 text-black-50' to='/about'>About</Link>
                         <Link className='text-decoration-none ps-4 text-black-50' to='/contact'>Contact</Link>
                     </Nav>
+                    <p>{user.name}</p>
                     <Form className="d-flex">
                         <Form.Control
                             type="search"
@@ -33,6 +36,9 @@ const NavBar = () => {
                         />
                         <Button variant="outline-success">Search</Button>
                     </Form>
+                    {
+                        <Link className='text-decoration-none ps-4 text-black-50' to='/login'>Login</Link>
+                    }
                 </Navbar.Collapse>
             </Container>
         </Navbar>

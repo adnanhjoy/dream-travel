@@ -6,6 +6,8 @@ import About from "../../pages/About/About";
 import Contact from "../../pages/Contact/Contact";
 import ErrorPage from "../../pages/ErrorPage/ErrorPage";
 import Package from "../../pages/Package/Package";
+import Login from "../../pages/Login/Login";
+import Register from "../../pages/Register/Register";
 
 export const router = createBrowserRouter([
     {
@@ -23,7 +25,7 @@ export const router = createBrowserRouter([
             {
                 path: '/places/:id',
                 element: <Package></Package>,
-                loader: ({params}) => fetch(`http://localhost:5000/places/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/places/${params.id}`)
             },
             {
                 path: '/package',
@@ -37,6 +39,14 @@ export const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact></Contact>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/signup',
+                element: <Register></Register>
             }
         ]
 

@@ -4,7 +4,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <Row className='bg-black p-5 text-white mt-5 w-100'>
+        <Row xs={1} md={3} className='bg-black p-5 text-white mt-5 w-100'>
             <Col>
                 <h5>Travel</h5>
                 <p>There are many variations of passages of available</p>
