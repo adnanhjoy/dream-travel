@@ -19,7 +19,7 @@ const NavBar = () => {
     return (
         <Navbar bg="light" expand="lg">
             <Container fluid>
-                <Link className='text-decoration-none ps-4 text-black-50 fs-1 fw-bold' to='/'>DTravel</Link>
+                <Link className='text-decoration-none ps-4 text-primary fs-1 fw-bold' to='/'>DTravel</Link>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -45,8 +45,8 @@ const NavBar = () => {
                     </Form>
                     {
                         user?.uid ?
-                        <Link onClick={handleLogout} className='text-decoration-none ps-4 text-black-50'>Logout</Link>:
-                        <Link className='text-decoration-none ps-4 text-black-50' to='/login'>Login</Link>
+                        <Link onClick={handleLogout} className='text-decoration-none px-4 text-black-50 mx-4'><button className='btn btn-primary'>Logout</button></Link>:
+                        <Link className='text-decoration-none px-4 text-black-50 mx-4' to='/login'><button className='btn btn-primary'>Login</button></Link>
                     }
                 </Navbar.Collapse>
             </Container>

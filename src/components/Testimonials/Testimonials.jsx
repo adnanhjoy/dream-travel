@@ -7,7 +7,7 @@ import './Testimonials.css'
 const Testimonials = () => {
     return (
         <Container className='mt-5'>
-            <p>TESTIMONIALS</p>
+            <p className='text-primary'>TESTIMONIALS</p>
             <h2>What our client say</h2>
             <small className='mb-5'>Create a visual identity for your company, <br /> and an overall brand</small>
 

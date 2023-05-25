@@ -7,7 +7,7 @@ const Contact = () => {
     return (
         <div className='mt-5'>
             <Container>
-                <p>Contact Us</p>
+                <p className='text-primary'>Contact Us</p>
                 <Form className='w-50 m-auto'>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
